@@ -1,0 +1,16 @@
+## 压力发射器
+
+Emitter 是一个用来控制速度，控制并发的工具，而且应该足够简单
+- Chan T     生产者和消费者之间的 chan
+- Producer T 生产自定义任务, ProducerFactory 
+- Consumer T 消费自定义任务, ConsumerFactory 
+
+能够自定义任务
+TaskGenerator 
+
+--- 
+go init 
+```
+go get -u github.com/gin-gonic/gin  # web框架 
+go get -u github.com/spf13/viper    # 配置
+```
