@@ -33,7 +33,7 @@ func (tc *TestTaskConsumerFactory) Generate() func(int) {
 	}
 }
 
-func TestIntEmitter(t *testing.T) {
+func TestEmitterBasicRun(t *testing.T) {
 	rootwg := sync.WaitGroup{}
 	ttp := &TestTaskProducerFactory{taskNoIndicator: 0}
 	ttc := &TestTaskConsumerFactory{t: t}
