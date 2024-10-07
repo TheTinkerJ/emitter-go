@@ -56,6 +56,9 @@ func (e *Emitter[TaskType]) StartWorkingLoop() {
 
 func (e *Emitter[TaskType]) StopWorkingLoop() {
 	close(e.stopChan)
+	for restMsg := range e.taskChan {
+		fmt.Println(restMsg)
+	}
 }
 
 func (e *Emitter[TaskType]) IncrConsumer() {
