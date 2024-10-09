@@ -3,9 +3,10 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/maogejing/emitter/api/controller"
+	"github.com/maogejing/emitter/bootstrap"
 )
 
-func Setup(gin *gin.Engine) {
+func Setup(sseServer *bootstrap.SSEServer, gin *gin.Engine) {
 	emitterRouter := gin.Group("emitter")
-	controller.NewEmitterRouter(emitterRouter)
+	controller.NewEmitterRouter(sseServer, emitterRouter)
 }
